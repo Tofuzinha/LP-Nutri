@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap');
+
+
+:root {
+    --orange: #E68138;
+    --dark_red: #97152E;
+    --green: #63BD59;
+
+    --gradient: linear-gradient(90deg, var(--dark_red), var(--orange));
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+}
+
+/* selecionar todos os textos com efeito */
+*::selection {
+    background-color: var(--orange);
+    color: #fff;
+}
+
+/* all status */
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #f9f9f9;
+}
+
+section {
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 7.5rem;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    border-radius: 5rem;
+    background: var(--gradient);
+    font-size: 1.7rem;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    transition: all .3 ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.heading {
+    text-align: center;
+    background: var(--gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+/* --------- section header --------- */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--dark_red);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 2rem;
+    color: #fff;
+}
+
+header .logo span {
+    color: var(--orange);
+}
+
+header .navbar a {
+    font-size: 1.7rem;
+    margin-left: 2rem;
+    color: #fff;
+}
+
+header .navbar a:hover {
+    color: var(--orange);
+}
+
+header input {
+    display: none;
+}
+
+header label {
+    font-size: 3rem;
+    color: var(--orange);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+/* --------- End section header --------- */
+
+/* --------- section home --------- */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/wallpaper-red.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .image img {
+    width: 20vw;
+    animation: float 3s linear infinite;
+    
+}
+
+.home .content h3 {
+    font-size: 5.5rem;
+    color: var(#333);
+    text-transform: uppercase;
+}
+
+.home .content h3 span {
+    color: var(--orange);
+    text-transform: uppercase;
+}
+
+.home .content p {
+    font-size: 1.7rem;
+    color: #333;
+    padding: 1rem 0;
+}
+
+/* --------- End section home --------- */
+
+/* --------- section features --------- */
+.features .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.features .box-container .box {
+    flex: 1 1 30rem;
+    background: #fff;
+    border-radius: .5rem;
+    border: .1rem solid rgba(100,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba(100,0,0,.8);
+    margin: 1.5rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: .2s ease;
+}
+
+.features .box-container .box:hover {
+    background: rgba(230,129,56,.2);
+    border: .1rem solid rgba(230,129,56,.2);
+    box-shadow: 0 .5rem 1rem rgba(230,129,56,.8);
+
+}
+
+.features .box-container .box img {
+    height: 15rem;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+.features .box-container .box h3 {
+    font-size: 2rem;
+    color: var(--orange);
+    padding-top: 1rem;
+    font-weight: bold;
+}
+
+.features .box-container .box p {
+    font-size: 1.5rem;
+    color: var(--dark_red);
+    padding-top: 1rem 0;
+}
+
+/* --------- End section features --------- */
+
+/* --------- Section About --------- */
+.about {
+    padding-bottom: 3rem;
+}
+
+.about h1 {
+    padding: 5rem 0;
+}
+
+.about .column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .col-img .image img {
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.about .col-img .image {
+    flex: 1 1 40rem;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.about .col-img .image::after {
+    content: '';
+    position: absolute;
+    background-color: var(--dark_red);
+    left: -30px;
+    bottom: 29px;
+    height: 99%;
+    width: 98%;
+    border-radius: 2rem;
+    box-shadow: -3px 3px 8px var(--dark_red);
+    opacity: .7;
+    z-index: -1;
+}
+
+.about .column .content {
+    flex: 1 1 40rem;
+    padding: 0 3rem;
+}
+
+.about .column .content h3 {
+    font-size: 3rem;
+    color: var(--orange);
+}
+
+.about .column .content p {
+    font-size: 1.2rem;
+    color: var(--dark_red);
+    padding: 1rem 0;
+    width: 70%;
+}
+
+.about .column .content .buttons a:last-child{
+    margin-left: 2rem;
+}
+
+/* --------- End Section About --------- */
+
+/* --------- Section Newsletter --------- */
+.newsletter {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: url(../img/wallpaper-news.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.newsletter h3 {
+    color: #fff;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.newsletter p {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 2rem auto;
+    width: 70rem;
+}
+
+.newsletter form {
+    display: flex;
+    max-width: 70rem;
+    border: .2rem solid #fff;
+    padding: .5rem;
+    border-radius: 5rem;
+    margin: 2rem auto;
+    height: 5.5rem;
+}
+
+.newsletter form input[type="email"] {
+    padding: 0 2rem;
+    font-size: 1.7rem;
+    background: none;
+    width: 100%;
+    color: #fff;
+    text-transform: none;
+    
+}
+
+.newsletter form input[type="email"]::placeholder {
+    color: #ccc;
+    text-transform: capitalize;
+}
+
+.newsletter form input[type="submit"] {
+    background: #fff;
+    width: 20rem;
+    font-size: 1.7rem;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+.newsletter form input[type="submit"]:hover {
+    color: var(--orange);
+}
+
+/* --------- End Section Newsletter --------- */
+
+
+
+
+/* --------- Animation frames --------- */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0rem);
+    }
+    50% {
+        transform: translateY(-3.5rem);
+    }
+}
+
+/* --------- End Animation frames --------- */
+
+/* --------- query responsive --------- */
+@media (max-width:1200px) {
+
+    html {
+        font-size: 55%;
+    }
+
+}
+
+@media (max-width:991px) {
+
+    section {
+        padding: 0 7%;
+        padding-top: 7.5rem;
+    }
+
+    .home .image img {
+        width: 30vw;
+        
+    }
+
+}
+
+@media (max-width:768px) {
+
+    header label {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        transform-origin: top left;
+        transform: scaleY(0);
+        opacity: 0;
+        transition: .2 ease;
+        
+    }
+
+    header .navbar a {
+        display: block;
+        margin: 7rem 0;
+        font-size: 2rem;
+        color: var(--dark_red);
+        text-align: center;
+        text-transform: uppercase;
+        
+    }
+
+    /* importacao da biblioteca do script menu  */
+    header input:checked ~ .navbar {
+        transform: scaleY(1);
+        opacity: 1;
+        
+    }
+
+    header input:checked ~ label::before {
+        content: '\f00d';
+        
+    }
+    /* end importacao  */
+
+    .home {
+        flex-flow: column-reverse;
+        
+    }
+
+    .home .image img {
+        width: 50%;
+    }
+
+    .home .content h3 {
+        font-size: 3.6rem;
+    }
+
+    .home .content p {
+        font-size: 1.5rem;
+    }
+
+    .about .col-img .image {
+        width: 80%;
+        padding: 0 2rem;
+    }
+
+    .about .col-img .image::after {
+        margin: 0 2rem;
+    }
+
+    .about .column .content p {
+        width: 100%;
+    }
+
+    .newsletter p {
+        width: auto;
+    }
+
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+ 
+
+    .about .col-img .image {
+        width: 90%;
+        padding: 0 2rem;
+    }
+
+    .about .column .content .buttons a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about .column .content .buttons a:last-child{
+        margin: 1rem 0;
+    }
+
+}
